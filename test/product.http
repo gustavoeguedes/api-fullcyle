@@ -1,0 +1,28 @@
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "price": 19.99
+}
+
+###
+GET http://localhost:8080/products
+
+###
+
+GET http://localhost:8080/products/ff370729-64cc-4270-a353-9196945ff75d
+
+###
+
+PUT http://localhost:8080/products/ff370729-64cc-4270-a353-9196945ff75d
+Content-Type: application/json
+
+{
+    "name": "Updated Product 1",
+    "price": 24.99
+}
+
+###
+
+DELETE http://localhost:8080/products/ff370729-64cc-4270-a353-9196945ff75d

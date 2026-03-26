@@ -107,7 +107,7 @@ func TestProduct_Update(t *testing.T) {
 	assert.Nil(t, err)
 
 	product.Name = "Updated Product"
-	err = productDb.Update(product.ID.String(), product)
+	err = productDb.Update(product)
 	assert.Nil(t, err)
 
 	productFound, err := productDb.FindByID(product.ID.String())

@@ -40,8 +40,8 @@ func (p *Product) FindAll(page, limit int, sort string) ([]entity.Product, error
 	return products, err
 }
 
-func (p *Product) Update(id string, product *entity.Product) error {
-	_, err := p.FindByID(id)
+func (p *Product) Update(product *entity.Product) error {
+	_, err := p.FindByID(product.ID.String())
 	if err != nil {
 		return err
 	}
