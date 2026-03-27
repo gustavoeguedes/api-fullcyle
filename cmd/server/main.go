@@ -60,9 +60,9 @@ func main() {
 		r.Use(jwtauth.Authenticator)
 		r.Get("/", productHandler.GetProducts)
 		r.Post("/", productHandler.Create)
-		r.Get("//{id}", productHandler.GetProduct)
-		r.Put("//{id}", productHandler.Update)
-		r.Delete("//{id}", productHandler.Delete)
+		r.Get("/{id}", productHandler.GetProduct)
+		r.Put("/{id}", productHandler.Update)
+		r.Delete("/{id}", productHandler.Delete)
 	})
 
 	r.Post("/users", userHandler.Create)
